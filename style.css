@@ -1,0 +1,570 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+  font-family: 'Crimson Pro', serif;
+  background-color: #4a4a4a;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  background-repeat: repeat;
+  background-size: auto;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+.header-banner {
+ height: 260px;
+ position: relative;
+ width: 100vw;
+ max-width: 100vw;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+/* overflow: hidden; */
+ background-color: #1a1a1a; /* fallback color */
+ border: 4px solid white;
+ box-sizing: border-box;
+ line-height: normal;
+ }
+
+
+.banner-img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: center;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+}
+
+.banner-logo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+.band-photo-wrapper {
+ position: relative;
+ width: 100vw;  /* full viewport width */
+ overflow: hidden;
+}
+
+.band-about-wrapper {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.band-photo {
+ width: 100%;      /* full width */
+ height: auto;     /* maintain aspect ratio */
+ display: block;   /* remove inline space */
+ object-fit: cover;
+}
+
+
+.social-icons {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.75rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1DB954; /* Spotify green hover */
+}
+.band-tag {
+ font-size: 2.5rem;
+ font-style: italic;
+ font-weight: 700;
+ font-family: 'Crimson Pro', serif;
+ text-align: center;
+ padding: 1rem 3rem;
+ max-width: 100%;
+ color: #f8f8f8;
+/* margin: 2rem auto; */
+ background-color: #4a4a4a; /* Optional: still gives dark tone under texture */
+ background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  background-repeat: repeat;
+  background-size: auto;     
+ border-radius: 8px;
+}
+
+.spotify-wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+}
+
+.spotify-promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.spotify-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.spotify-button {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 1.25rem 2.5rem; 
+  color: #000;
+  background-color: #f2f2f2;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.spotify-button:hover {
+  background-color: #e0e0e0;
+  color: #111;
+}
+
+.corner-logo {
+ position: fixed;
+ bottom: 10px;
+ right: 10px;
+ width: 225px;
+ height: auto;
+ z-index: 1000;
+ pointer-events: none;
+}
+
+
+/* Rotate animation */
+@keyframes rotateLogo {
+ from {
+   transform: rotate(0deg);
+ }
+ to {
+   transform: rotate(360deg);
+ }
+}
+ /* Make the main content fixed and fill the screen */
+main {
+  position: relative;
+  z-index: 0;
+  background-color: #4a4a4a;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+
+
+/* Hero scrolls normally */
+.hero-content {
+  font-family: 'Crimson Pro', serif;
+  text-align: center;
+  color: #f8f8f8;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5); /* keeps the blurry background look intact */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-band h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.about-band p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+/* Hero scrolls normally */
+#hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('blurry.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 33vh;
+  padding-left: 5vw;
+}
+
+.hero-text {
+  position: relative;
+  top: -225px;
+  z-index: 2;
+  color: white;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+ .hero-text h1 {
+  font-family: 'Crimson Pro', serif;
+  margin: 0;
+  font-size: 1.5rem; 
+ }
+
+ .here-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  font-family: 'Open Sans', sans-serif;
+ }
+
+#contact {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: 'Crimson Pro', serif; /* optional: change to match your design */
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: #1DB954; /* or whatever accent color you’re using */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+  body, html {
+ height: auto;
+ margin: 0;
+ padding: 0;
+} 
+
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  padding: 2rem; 
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+
+.album-box {
+ /* background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark background 
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 800px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);*/
+  color: #f8f8f8;
+  width: 280px;
+  font-family: 'Crimson Pro', serif;
+}
+
+.album-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.album-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.album-box li {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.album-box a {
+  color: white; /* Spotify green */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.album-box a:hover {
+  text-decoration: underline;
+}
+
+.release-box {
+/* background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 700px;
+  border-radius: 1rem;*/
+  width: 280px;
+  font-family: "Crimson Pro", serif;
+  color: #f8f8f8;
+}
+
+.release-box h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.release-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.release-box li {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.release-box a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.release-box a:hover {
+  text-decoration: underline;
+}
+
+.new-releases {
+  width: 280px;
+  font-family: "Crimson Pro", serif;
+  color: white; 
+}
+
+.new-releases h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.new-releases ul {
+  list-style-type: none;
+  padding: 0;
+}
+ .new-releases li {
+  margin: 0.5rem 0;
+  text-align: center;
+ }
+
+ .new-releases a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+ }
+
+ .new-releases a:hover {
+  text-decoration: underline;
+ }
+
+
+.video-gallery {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #f8f8f8;
+  text-align: center;
+  padding: 2rem;
+ background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark background */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.video-gallery h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 350px;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header-banner {
+    height: 180px;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .banner-logo {
+    width: 60%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-banner {
+    height: 140px;
+    padding: 0.5rem;
+  }
+
+  .banner-logo {
+    width: 80%;
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 800px) {
+  .video-gallery iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+ .band-about-wrapper {
+   flex-direction: column;
+   margin-top: 0;
+ }
+}
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+  .band-photo {
+    height: auto;
+  }
+
+  .band-about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-icons {
+    position: relative;
+    margin-bottom: 1rem;
+    justify-content: center;
+    top: auto;
+    left: auto;
+  }
+
+  .spotify-promo {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .spotify-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .spotify-button {
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .album-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .band-tag {
+    font-size: 1.75rem;
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.25rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .album-box,
+  .release-box,
+  .new-releases {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .video-gallery h2 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
