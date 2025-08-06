@@ -548,6 +548,14 @@ main {
   .video-gallery h2 {
     font-size: 2rem;
   }
+
+}
+
+/* Tablets and smaller - hide corner logo */
+@media (max-width: 768px) {
+  .corner-logo {
+    display: none;
+  }
 }
 
 
