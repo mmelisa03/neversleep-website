@@ -48,48 +48,52 @@ body {
 }
 
 
-
 .band-photo-wrapper {
- position: relative;
- width: 100vw;  /* full viewport width */
- overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 8px;  
 }
+
 
 .band-about-wrapper {
   position: relative;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  width: 90%;
+  max-width: 1100px;
+  height: 600px;
+  margin: 2rem auto;
+  overflow: hidden; 
+ border-radius: 8px;
 }
-
 
 .band-photo {
- width: 100%;      /* full width */
- height: auto;     /* maintain aspect ratio */
- display: block;   /* remove inline space */
+width: 100%;    /* full width */
+ height: 100%;
  object-fit: cover;
+ object-position: center 40%;
+ display: block;
+ box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.6),
+             0 0 25 px  rgba(0,0,0,0.6);
 }
+
+
 
 
 .social-icons {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 10;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .social-icons a {
   color: white;
   font-size: 1.75rem;
-  transition: color 0.3s ease;
+  transition: trasform 0.2s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #1DB954; /* Spotify green hover */
+  color: #ff2b2b;
+  transform: scale(1.15);
 }
 .band-tag {
  font-size: 2.5rem;
@@ -110,7 +114,8 @@ body {
 
 .spotify-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
 }
 
@@ -118,13 +123,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  background-repeat: repeat;
-  background-size: 300px 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  gap: 2rem;
 }
 
 .spotify-icon {
@@ -151,7 +150,27 @@ body {
   background-color: #e0e0e0;
   color: #111;
 }
-
+.stream-title {
+  text-align: center;
+  margin-bottom: 1.8rem;
+  font-family: Crimson Pro, serif;
+  font-style: italic;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+.stream-icon {
+  width: 60px;
+  height: 60px; 
+}
+.stream-link {
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.stream-link:hover {
+  transform: scale(1.1);
+}
 .corner-logo {
  position: fixed;
  bottom: 10px;
@@ -212,9 +231,9 @@ main {
 #hero {
   position: relative;
   height: 100vh;
-  background-image: url('blurry.jpg');
+  background-image: url('skelly.jpg');
   background-attachment: fixed;
-  background-position: center;
+  background-position: center 22%;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
@@ -265,7 +284,7 @@ main {
 }
 
 #contact a {
-  color: #1DB954; /* or whatever accent color you’re using */
+  color: #ff2b2b; /* or whatever accent color you’re using */
   text-decoration: none;
   font-weight: bold;
 }
@@ -288,6 +307,7 @@ main {
   padding: 2rem; 
   max-width: 1000px;
   margin: 0 auto;
+  align-items: flex-start;
 }
 
 
@@ -302,6 +322,8 @@ main {
   color: #f8f8f8;
   width: 280px;
   font-family: 'Crimson Pro', serif;
+  position: relative; 
+  z-index: 2;
 }
 
 .album-box h2 {
@@ -324,13 +346,23 @@ main {
 
 .album-box a {
   color: white; /* Spotify green */
+  /*background: yellow;*/
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
+  pointer-events: auto; 
 }
 
 .album-box a:hover {
   text-decoration: underline;
+}
+
+.ep-art {
+  display: block;
+  width: 280px;
+  height: auto;
+  margin: 0 auto 20px auto; 
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
 }
 
 .release-box {
@@ -365,20 +397,22 @@ main {
 .release-box a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .release-box a:hover {
   text-decoration: underline;
 }
 
-.new-releases {
+.upcoming {
   width: 280px;
   font-family: "Crimson Pro", serif;
   color: white; 
+  text-align:  center; 
 }
 
-.new-releases h2 {
+.upcoming h2 {
   font-size: 2rem;
   font-weight: 700;
   font-style: italic;
@@ -386,23 +420,31 @@ main {
   text-align: center;
 }
 
-.new-releases ul {
+.upcoming ul {
   list-style-type: none;
   padding: 0;
 }
- .new-releases li {
+ .upcoming li {
   margin: 0.5rem 0;
   text-align: center;
  }
 
- .new-releases a {
+ .upcoming a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.5rem;
  }
 
- .new-releases a:hover {
+ .upcoming a:hover {
   text-decoration: underline;
+ }
+
+ .demo-page {
+  padding-top: 1rem;
+  position: relative;
+  z-index: 2;
+  
  }
 
 
@@ -439,6 +481,32 @@ main {
   border: none;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.featured-thumbnail {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.featured {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+}
+
+.featured a {
+  color: white;
+  text-decoration: none;
+}
+
+.featured a:hover {
+  text-decoration: underline;
+}
+
+.featured p:first-child {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
