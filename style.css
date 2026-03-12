@@ -703,9 +703,9 @@ main {
 .site-footer {
   text-align: center;
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.65);
   margin-top: 4rem;
-  padding-bottom: 1.5rem;;
+  padding-bottom: 2rem;
 }
 .site-footer p {
   margin: 0;
