@@ -626,6 +626,58 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  main {
+    min-height: auto;
+  }
+
+  #hero {
+    height: auto;
+    min-height: 70vh;
+    background-attachment: scroll;
+    padding-top: 6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-position: center 22%;
+    background-size: cover;
+  }
+
+  .hero-text {
+    top: 0;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .spotify-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .spotify-promo {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .album-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
