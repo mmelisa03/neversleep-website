@@ -17,8 +17,8 @@ body {
 .header-banner {
  height: 260px;
  position: relative;
- width: 100vw;
- max-width: 100vw;
+ width: 100%;
+ max-width: 100%;
  display: flex;
  justify-content: center;
  align-items: center; 
@@ -88,7 +88,7 @@ width: 100%;    /* full width */
 .social-icons a {
   color: white;
   font-size: 1.75rem;
-  transition: trasform 0.2s ease, color 0.3s ease;
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -260,7 +260,7 @@ main {
   font-size: 1.5rem; 
  }
 
- .here-text p {
+ .hero-text p {
   font-size: 1rem;
   line-height: 1.6;
   margin-top: 1rem;
@@ -530,6 +530,48 @@ main {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .demo-ep-section,
+  .demo-ep-container,
+  .tracklist,
+  .album-section {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tracklist,
+  .album-info,
+  .album-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .tracklist ul,
+  .tracklist li {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-position: inside;
+  }
+
+  img,
+  iframe,
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
 
 @media (max-width: 768px) {
   .header-banner {
@@ -641,12 +683,12 @@ main {
 
 }
 
-/* Tablets and smaller - hide corner logo */
+/* Tablets and smaller - hide corner logo 
 @media (max-width: 768px) {
   .corner-logo {
     display: none;
   }
-}
+} */
 
 @media (max-width: 768px) {
   main {
@@ -709,6 +751,91 @@ main {
 }
 .site-footer p {
   margin: 0;
+}
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  main,
+  .demo-page,
+  .album-container,
+  .album-box,
+  .release-box,
+  .upcoming,
+  .video-gallery,
+  .band-about-wrapper,
+  .band-photo-wrapper,
+  #contact {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .album-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 0 auto;
+  }
+
+  .album-box,
+  .release-box,
+  .upcoming {
+    width: min(100%, 320px);
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .album-box ul,
+  .release-box ul,
+  .upcoming ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .album-box li,
+  .release-box li,
+  .upcoming li {
+    margin: 0.75rem 0;
+  }
+
+  .album-box a,
+  .release-box a,
+  .upcoming a {
+    display: block;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .ep-art,
+  .band-photo,
+  .featured-thumbnail,
+  iframe,
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #contact {
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+  }
+
+  .band-about-wrapper {
+    height: auto;
+  }
 }
 
 
