@@ -231,7 +231,7 @@ main {
 #hero {
   position: relative;
   height: 100vh;
-  background-image: url('skelly.jpg');
+  background-image: url('skelly-blurred.jpg');
   background-attachment: fixed;
   background-position: center 22%;
   background-size: cover;
