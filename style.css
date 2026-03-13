@@ -425,6 +425,8 @@ main {
   padding: 0;
 }
  .upcoming li {
+  font-weight: 700;
+  font-size: 1.1rem;
   margin: 0.5rem 0;
   text-align: center;
  }
@@ -433,7 +435,7 @@ main {
   color: white;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 5rem;
  }
 
  .upcoming a:hover {
