@@ -202,7 +202,7 @@ main {
 
 
 
-/* Hero scrolls normally */
+/* Hero scrolls normally 
 .hero-content {
   font-family: 'Crimson Pro', serif;
   text-align: center;
@@ -210,10 +210,10 @@ main {
   padding: 4rem 2rem;
   max-width: 900px;
   margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.5); /* keeps the blurry background look intact */
+  background-color: rgba(0, 0, 0, 0.5); /* keeps the blurry background look intact 
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
+} */
 
 .about-band h1 {
   font-size: 2.5rem;
