@@ -216,9 +216,10 @@ main {
 } */
 
 .about-band h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-weight: 400;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
 }
 
 .about-band p {
@@ -291,6 +292,48 @@ main {
 
 #contact a:hover {
   text-decoration: underline;
+}
+.merch-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.merch-title {
+  font-size: 1.8rem;
+  font-family: 'Crimson Pro', serif;
+  margin: 0;
+}
+
+.merch-button {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 20px; 
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 700;
+  color: white;
+  background-color: transparent; 
+  text-decoration: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease; 
+}
+
+.merch-button:hover {
+  transform: scale(1.1);
+}
+.shopify-icon {
+  width: 45px;
+  height: auto; 
+  filter: brightness(0) saturate(100%) invert(24%) sepia(98%) saturate(7471%) hue-rotate(357deg) brightness(98%) contrast(119%);
+  transition: transform 0.2s ease; 
+}
+.shopify-icon:hover {
+  transform: scale(1.5);
 }
 
   body, html {
@@ -629,7 +672,7 @@ main {
 
   .social-icons {
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     justify-content: center;
     top: auto;
     left: auto;
